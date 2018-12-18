@@ -1,0 +1,4 @@
+var _dyndata = {};
+_dyndata["background"]="https://fl.imgsniper.com/li_banner/engineer2018/0914-avtovaz/728x90/728x90_vesta/bg1.png";
+_dyndata["img"]="https://fl.imgsniper.com/li_banner/engineer2018/0914-avtovaz/728x90/728x90_vesta/car2.png";
+_dyndata["text"]="https://fl.imgsniper.com/li_banner/engineer2018/0914-avtovaz/728x90/728x90_vesta/button4.png";

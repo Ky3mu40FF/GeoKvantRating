@@ -1,0 +1,4 @@
+C:\Users\Ky3mu40FF\Documents\GeoKvantRating\GeoKvantRating\obj\Debug\netcoreapp2.0\GeoKvantRating.csprojResolveAssemblyReference.cache
+C:\Users\Ky3mu40FF\Documents\GeoKvantRating\GeoKvantRating\obj\Debug\netcoreapp2.0\GeoKvantRating.csproj.CoreCompileInputs.cache
+C:\Users\Ky3mu40FF\Documents\GeoKvantRating\GeoKvantRating\obj\Debug\netcoreapp2.0\GeoKvantRating.AssemblyInfoInputs.cache
+C:\Users\Ky3mu40FF\Documents\GeoKvantRating\GeoKvantRating\obj\Debug\netcoreapp2.0\GeoKvantRating.AssemblyInfo.cs

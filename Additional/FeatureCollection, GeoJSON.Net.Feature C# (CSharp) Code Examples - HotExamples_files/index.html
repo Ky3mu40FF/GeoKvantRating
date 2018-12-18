@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- saved from url=(1383)https://edp2.adriver.ru/images/0005850/0005850682/0/index.html?html_params=rhost%3Dad.adriver.ru%26sid%3D187537%26sz%3D278156%26ad%3D668691%26pid%3D2813885%26bid%3D5850682%26ar_ntype%3D0%26xpid%3DDe7AhTcLPa0nhBhAp-BK3RJEYBFinB2btzK3ip219ki9jpedowDnqZG1lvz_XqI82-SF93ch4-hwctZt62pUChCWeLw8udifRf33twxA%26ar_pass%3Dhttps://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DC6LsAbRP4W-OvMYGJygX0iYegBqeDhv9Qzdmg25YBwI23ARABIABghJXshdwdggEXY2EtcHViLTM2OTc1MjIzNzI1ODE1MTTIAQmpAgZhUmf8XFA-qAMBqgSJAk_QYJLpUlbwgia9mVUG5SC6jeBGtRBA37RyNs0edXvIKvcgqozDxZ8lOyousiDxqDMoOyJYLhPmdkLZh-6UVZM9UcteU1R419VlWmEcXHREuj5rzaPQgc7jtuVYuBjsnQqLTcQ6yNyg20SGzyu9JzqZ2WNg4I9dgTMaqdzx2gOIbWcblcNjxkBA-gQjND7waO3RzX7pJIzAxz0gCYPL6kc6Igv5uD32QvNzg6d7pW_0GtVwDsfNCPiAh1pxIbaqFynwSWcoT7y2rxMu7-3gCakKZv4aN-udjcp9naUEWjUqbxrrtkfEnmIM2cTqg7tOmKhxK2ufGRzZoDLn7KMJuIFmEFcoxlIHfmmABvWsi4iKzby-2gGgBiGoB6a-G6gH2csbqAfPzBvYBwDSCAUIgAEQAQ%2526num%253D1%2526sig%253DAOD64_3_KJOaHrbAXiAscKlbOMBq8Z8Ytw%2526client%253Dca-pub-3697522372581514%2526adurl%253D%26bt%3D63%26pz%3D1%26bn%3D0%26width%3D300%26height%3D600%26rnd%3D1016442141%26geozoneid%3D38%26rleurl%3Dhttps://ad.doubleclick.net/ddm/trackclk/N755990.111392ADRIVER.RU/B21091589.220589370;dc_trk_aid=418777941;dc_trk_cid=101024523;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=%26target%3D_blank%26sliceid%3D1509242%26uid%3D90204554906%26extension%3D -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <script type="text/javascript" async="" src="./V6zvOIoD.js.загружено"></script><script type="text/javascript" src="./html.js.загружено"></script> 
+
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<meta name="ad.size" content="width=300,height=600">
+
+<script src="./createjs-2015.11.26.min.js.загружено"></script>
+<script src="./300x600_canvas.js.загружено"></script>
+<script>
+var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+function init() {
+  canvas = document.getElementById("canvas");
+  anim_container = document.getElementById("animation_container");
+  dom_overlay_container = document.getElementById("dom_overlay_container");
+  var comp=AdobeAn.getComposition("F69DA483C40241F69AB3E6D4EC8C9C31");
+  var lib=comp.getLibrary();
+  var loader = new createjs.LoadQueue(false);
+  loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
+  loader.addEventListener("complete", function(evt){handleComplete(evt,comp)});
+  var lib=comp.getLibrary();
+  loader.loadManifest(lib.properties.manifest);
+}
+function handleFileLoad(evt, comp) {
+  var images=comp.getImages(); 
+  if (evt && (evt.item.type == "image")) { images[evt.item.id] = evt.result; }  
+}
+function handleComplete(evt,comp) {
+  //This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+  var lib=comp.getLibrary();
+  var ss=comp.getSpriteSheet();
+  var queue = evt.target;
+  var ssMetadata = lib.ssMetadata;
+  for(i=0; i<ssMetadata.length; i++) {
+    ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
+  }
+  exportRoot = new lib._300x600_canvas();
+  stage = new lib.Stage(canvas);
+  stage.enableMouseOver(); 
+  //Registers the "tick" event listener.
+  fnStartAnimation = function() {
+    stage.addChild(exportRoot);
+    createjs.Ticker.setFPS(lib.properties.fps);
+    createjs.Ticker.addEventListener("tick", stage);
+  }      
+  //Code to support hidpi screens and responsive scaling.
+  function makeResponsive(isResp, respDim, isScale, scaleType) {    
+    var lastW, lastH, lastS=1;    
+    window.addEventListener('resize', resizeCanvas);    
+    resizeCanvas();   
+    function resizeCanvas() {     
+      var w = lib.properties.width, h = lib.properties.height;      
+      var iw = window.innerWidth, ih=window.innerHeight;      
+      var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;      
+      if(isResp) {                
+        if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+          sRatio = lastS;                
+        }       
+        else if(!isScale) {         
+          if(iw<w || ih<h)            
+            sRatio = Math.min(xRatio, yRatio);        
+        }       
+        else if(scaleType==1) {         
+          sRatio = Math.min(xRatio, yRatio);        
+        }       
+        else if(scaleType==2) {         
+          sRatio = Math.max(xRatio, yRatio);        
+        }     
+      }     
+      canvas.width = w*pRatio*sRatio;     
+      canvas.height = h*pRatio*sRatio;
+      canvas.style.width = dom_overlay_container.style.width = anim_container.style.width =  w*sRatio+'px';       
+      canvas.style.height = anim_container.style.height = dom_overlay_container.style.height = h*sRatio+'px';
+      stage.scaleX = pRatio*sRatio;     
+      stage.scaleY = pRatio*sRatio;     
+      lastW = iw; lastH = ih; lastS = sRatio;            
+      stage.tickOnUpdate = false;            
+      stage.update();            
+      stage.tickOnUpdate = true;    
+    }
+  }
+  makeResponsive(false,'both',false,1); 
+  AdobeAn.compositionLoaded(lib.properties.id);
+  fnStartAnimation();
+}
+</script>
+
+  <link href="./index.css" type="text/css" rel="stylesheet">    
+  <script src="./index.js.загружено"></script>
+
+</head>
+
+<body onload="init();" marginwidth="0" marginheight="0">
+    
+
+    <div onclick="ar_sendPixel(ar_pass); return ar_callLink();">
+      <div id="animation_container" style="background-color:rgba(255, 255, 255, 1.00); width:300px; height:600px">
+        <canvas id="canvas" width="300" height="600" style="position: absolute; display: block; background-color: rgb(255, 255, 255); width: 300px; height: 600px;"></canvas>
+        <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:300px; height:600px; position: absolute; left: 0px; top: 0px; display: block;">
+        </div>
+      </div>
+    </div>   
+
+
+   
+    <div id="b_i" onmouseover="showObject(&#39;block&#39;)" class="button_info unsel" style="display: none; opacity: -3.19189e-16;"></div>
+
+    <div id="block" onclick="ar_sendPixel(ar_pass); return ar_callLink();">
+
+      <div class="legal_top">
+          <a href="https://edp2.adriver.ru/images/0005850/0005850682/0/index.html?html_params=rhost%3Dad.adriver.ru%26sid%3D187537%26sz%3D278156%26ad%3D668691%26pid%3D2813885%26bid%3D5850682%26ar_ntype%3D0%26xpid%3DDe7AhTcLPa0nhBhAp-BK3RJEYBFinB2btzK3ip219ki9jpedowDnqZG1lvz_XqI82-SF93ch4-hwctZt62pUChCWeLw8udifRf33twxA%26ar_pass%3Dhttps://adclick.g.doubleclick.net/aclk%253Fsa%253DL%2526ai%253DC6LsAbRP4W-OvMYGJygX0iYegBqeDhv9Qzdmg25YBwI23ARABIABghJXshdwdggEXY2EtcHViLTM2OTc1MjIzNzI1ODE1MTTIAQmpAgZhUmf8XFA-qAMBqgSJAk_QYJLpUlbwgia9mVUG5SC6jeBGtRBA37RyNs0edXvIKvcgqozDxZ8lOyousiDxqDMoOyJYLhPmdkLZh-6UVZM9UcteU1R419VlWmEcXHREuj5rzaPQgc7jtuVYuBjsnQqLTcQ6yNyg20SGzyu9JzqZ2WNg4I9dgTMaqdzx2gOIbWcblcNjxkBA-gQjND7waO3RzX7pJIzAxz0gCYPL6kc6Igv5uD32QvNzg6d7pW_0GtVwDsfNCPiAh1pxIbaqFynwSWcoT7y2rxMu7-3gCakKZv4aN-udjcp9naUEWjUqbxrrtkfEnmIM2cTqg7tOmKhxK2ufGRzZoDLn7KMJuIFmEFcoxlIHfmmABvWsi4iKzby-2gGgBiGoB6a-G6gH2csbqAfPzBvYBwDSCAUIgAEQAQ%2526num%253D1%2526sig%253DAOD64_3_KJOaHrbAXiAscKlbOMBq8Z8Ytw%2526client%253Dca-pub-3697522372581514%2526adurl%253D%26bt%3D63%26pz%3D1%26bn%3D0%26width%3D300%26height%3D600%26rnd%3D1016442141%26geozoneid%3D38%26rleurl%3Dhttps://ad.doubleclick.net/ddm/trackclk/N755990.111392ADRIVER.RU/B21091589.220589370;dc_trk_aid=418777941;dc_trk_cid=101024523;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=%26target%3D_blank%26sliceid%3D1509242%26uid%3D90204554906%26extension%3D#" onmouseover="hideObject(&#39;block&#39;);" id="stopButton" class="close unsel">×</a>
+      </div>
+
+      <div id="legal_scroll" class="unsel">
+        <p>
+        *Предложение действительно для нового автомобиля Citroen C4 Седан,&nbsp; в комплектации Live (Лив), 1.6 л, МКПП, производства 2018 года и рассчитано с учетом скидки в размере 100 000 руб. по программе трейд-ин Citroen Select (Селект).
+        <br><br>
+        **Для автомобилей в данной комплектации действует предложение «Зимние шины в подарок», которое включает в себя комплект зимних шин, точная марка которых уточняется в дилерских центрах. Предложение не подлежит денежной компенсации.
+        <br><br>
+        Предложение не является офертой, действует с 01.11.2018 по 30.11.2018 и может быть изменено ООО «Пежо Ситроен Рус». Подробности – в салонах официальных дилеров Citroen или на сайте www.citroen.ru.
+       </p>   
+</div>
+    </div> 
+<script language="JavaScript1.1" src="./f(8).txt"></script>
+
+
+
+<iframe src="./6uQTKQJz.html" width="0" height="0" style="display: none;"></iframe></body></html>
