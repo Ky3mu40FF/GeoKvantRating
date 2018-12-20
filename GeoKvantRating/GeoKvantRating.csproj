@@ -1,25 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="GeoJSON.Net" Version="1.1.70" />
     <PackageReference Include="Google.Apis" Version="1.36.1" />
-    <PackageReference Include="Google.Apis.Drive.v3" Version="1.36.1.1407" />
-    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.36.1.1412" />
+    <PackageReference Include="Google.Apis.Drive.v3" Version="1.36.1.1435" />
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.36.1.1443" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4">
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.1" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="2.1.1" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.NetTopologySuite" Version="2.2.0" />
     <PackageReference Include="Npgsql.GeoJSON" Version="1.0.0" />
   </ItemGroup>
 
